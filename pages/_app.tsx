@@ -1,10 +1,18 @@
 import '../src/app/styles/index.scss';
-import type { AppProps } from 'next/app';
+import { AppProps } from 'next/app';
+
+import { Layout } from '../src/widgets/Layout';
 
 import { ReturnComponentType } from 'shared/types';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReturnComponentType => {
-    return <Component {...pageProps} />;
+    return (
+        <Layout>
+            <main>
+                <Component {...pageProps} />
+            </main>
+        </Layout>
+    );
 };
 
 export default MyApp;

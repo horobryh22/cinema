@@ -9,7 +9,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps): ReturnComponentType => {
     return (
-        <div className={classNames(classes.Sidebar, {}, [String(className)])}>
+        <div className={classNames(classes.Sidebar, {}, [classes[className!]])}>
             Sidebar
         </div>
     );

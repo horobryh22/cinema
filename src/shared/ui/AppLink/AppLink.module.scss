@@ -1,0 +1,24 @@
+.AppLink {
+
+}
+
+.logo {
+  @apply px-layout mb-10 block;
+}
+
+.link {
+  @apply flex items-center text-gray-600 px-3 mb-4 cursor-pointer;
+
+  > span {
+    @apply ml-3 text-lg hover:text-white;
+  }
+
+  > svg {
+    @apply text-2lg;
+  }
+
+  > span,
+  > svg {
+    @apply transition-colors;
+  }
+}

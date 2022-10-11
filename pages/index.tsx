@@ -1,11 +1,9 @@
 import type { NextPage } from 'next';
 
-import MyApp from './_app';
-
-import { HomePage } from 'pages/HomePage';
+import { HomePage } from '../src/pages/HomePage';
 
 const Home: NextPage = () => {
-    return <MyApp Component={HomePage} pageProps={{}} />;
+    return <HomePage />;
 };
 
 export default Home;

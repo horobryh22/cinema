@@ -14,7 +14,7 @@ interface LayoutProps {
 
 export const Layout = ({ className, children }: LayoutProps): ReturnComponentType => {
     return (
-        <div className={classNames(classes.Layout, {}, [String(className)])}>
+        <div className={classNames(classes.Layout, {}, [classes[className!]])}>
             <Navbar />
             <div className={classes.content}>{children}</div>
             <Sidebar />

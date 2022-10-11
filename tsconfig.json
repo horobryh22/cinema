@@ -21,7 +21,7 @@
     "incremental": true
   },
   "include": [
-    "src/app/types/next-env.d.ts",
+    "./next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
