@@ -18,6 +18,7 @@ export const genreAPI = createApi({
         fetchGenres: build.query<IGenre[], void>({
             query: () => ({
                 url: '/genres',
+                credentials: 'include',
             }),
         }),
     }),
