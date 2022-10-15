@@ -1,4 +1,6 @@
-export const clearText = (string: string, limit: null | number): string => {
+import { Nullable } from 'shared/types';
+
+export const clearText = (string: string, limit: Nullable<number>): string => {
     let result = string
         .replace(/<[^>]+>/g, '')
         .replace(/&[^;]+./g, '')

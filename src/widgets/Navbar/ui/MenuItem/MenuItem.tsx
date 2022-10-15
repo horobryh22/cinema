@@ -29,7 +29,7 @@ export const MenuItem = (props: IMenuItemProps): ReturnComponentType => {
                 [classes[className!]],
             )}
         >
-            <AppLink href={link} className="link">
+            <AppLink href={link} className="nav-link">
                 <MaterialIcon name={icon} />
                 <span>{title}</span>
             </AppLink>

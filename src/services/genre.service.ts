@@ -1,15 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { API_URL } from 'api/config';
-
-export interface IGenre {
-    _id: string;
-    name: string;
-    slug: string;
-    description: string;
-    icon: string;
-    createdAt: string;
-}
+import { IGenre } from 'shared/types/movie';
 
 export const genreAPI = createApi({
     reducerPath: 'genreAPI',

@@ -6,7 +6,7 @@
   @apply px-layout mb-10 block;
 }
 
-.link {
+.nav-link {
   @apply flex items-center text-gray-600 px-3 mb-4 cursor-pointer;
 
   > span {
@@ -20,5 +20,32 @@
   > span,
   > svg {
     @apply transition-colors;
+  }
+}
+
+.sidebar-link {
+  @apply flex items-center py-3 px-4 relative;
+
+  &::after {
+    @apply absolute -right-0.5 h-0 w-0.5 bg-transparent;
+    content: '';
+    top: 28%;
+    transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    @apply bg-primary h-2/5;
+  }
+
+  img {
+    @apply rounded-image
+  }
+
+  > span {
+    @apply ml-3 text-white truncate;
+
+    &:last-child {
+      width: 70%;
+    }
   }
 }
