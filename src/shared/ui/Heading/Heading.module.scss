@@ -5,3 +5,7 @@
 .subtitle {
    @apply text-gray-300 mb-8 text-xl
 }
+
+.movieList {
+  @apply font-bold text-xl mb-5 capitalize text-white text-opacity-100;
+}

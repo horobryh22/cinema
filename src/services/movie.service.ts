@@ -10,7 +10,6 @@ export const movieAPI = createApi({
         fetchMovies: build.query<IMovie[], string>({
             query: (searchTerm?) => ({
                 url: '/movies',
-                credentials: 'include',
                 params: searchTerm
                     ? {
                           searchTerm,
@@ -18,7 +17,12 @@ export const movieAPI = createApi({
                     : {},
             }),
         }),
+        fetchPopularMovies: build.query<IMovie[], void>({
+            query: () => ({
+                url: '/movies/most-popular',
+            }),
+        }),
     }),
 });
 
-export const { useFetchMoviesQuery } = movieAPI;
+export const { useFetchMoviesQuery, useFetchPopularMoviesQuery } = movieAPI;

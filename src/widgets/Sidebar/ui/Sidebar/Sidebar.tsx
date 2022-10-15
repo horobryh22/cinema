@@ -1,3 +1,4 @@
+import { MoviesContainer } from '../MoviesContainer/MoviesContainer';
 import { Search } from '../Search/Search';
 
 import classes from './Sidebar.module.scss';
@@ -9,6 +10,7 @@ export const Sidebar = (): ReturnComponentType => {
     return (
         <div className={classNames(classes.Sidebar)}>
             <Search />
+            <MoviesContainer />
         </div>
     );
 };

@@ -5,6 +5,7 @@ import classes from './Heading.module.scss';
 
 export enum HeadingThemes {
     SUBTITLE = 'subtitle',
+    MOVIE_LIST = 'movieList',
 }
 
 interface HeadingProps {
