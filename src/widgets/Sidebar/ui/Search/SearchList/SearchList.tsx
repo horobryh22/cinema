@@ -1,17 +1,18 @@
 import Image from 'next/image';
 
+import classes from './SearchList.module.scss';
+
 import { getMovieUrl } from 'api/url';
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 import { IMovie } from 'shared/types/movie';
 import { AppLink } from 'shared/ui';
-import classes from 'widgets/Sidebar/ui/Search/SearchList/SearchList.module.scss';
 
-interface IMoviesListProps {
+interface ISearchList {
     movies: IMovie[];
 }
 
-export const SearchList = ({ movies }: IMoviesListProps): ReturnComponentType => {
+export const SearchList = ({ movies }: ISearchList): ReturnComponentType => {
     const mappedMovies = movies.map(movie => {
         return (
             <AppLink

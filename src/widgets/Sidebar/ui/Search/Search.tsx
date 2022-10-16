@@ -1,10 +1,11 @@
+import { useSearch } from '../../lib/hooks/useSearch';
+
 import classes from './Search.module.scss';
+import { SearchList } from './SearchList/SearchList';
 
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 import { SearchField } from 'shared/ui';
-import { useSearch } from 'widgets/Sidebar/lib/hooks/useSearch';
-import { SearchList } from 'widgets/Sidebar/ui/Search/SearchList/SearchList';
 
 export const Search = (): ReturnComponentType => {
     const { handleSearch, movies, isSuccess, searchTerm } = useSearch();

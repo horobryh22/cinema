@@ -5,8 +5,7 @@ import classes from './MovieList.module.scss';
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 import { IMovie } from 'shared/types/movie';
-import { AppLink } from 'shared/ui';
-import { LINK_THEME } from 'shared/ui/AppLink/AppLink';
+import { AppLink, LINK_THEME } from 'shared/ui';
 
 interface IMoviesListProps {
     title: string;

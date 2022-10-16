@@ -1,13 +1,14 @@
+import { IMenuItem } from '../../types';
+
 import { getGenreUrl } from 'api/url';
 import { useFetchGenresQuery } from 'services/genre.service';
-import { IMenuItem } from 'widgets/Navbar/types';
 
-interface UsePopularGenresResult {
+interface IUsePopularGenresResult {
     isLoading: boolean;
     genres: IMenuItem[];
 }
 
-export const usePopularGenres = (): UsePopularGenresResult => {
+export const usePopularGenres = (): IUsePopularGenresResult => {
     const { isLoading, genres } = useFetchGenresQuery(undefined, {
         selectFromResult: ({ data, isLoading }) => ({
             genres:

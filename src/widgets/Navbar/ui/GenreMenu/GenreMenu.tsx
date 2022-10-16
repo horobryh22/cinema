@@ -5,8 +5,7 @@ import classes from './GenreMenu.module.scss';
 
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
-import { SkeletonLoader } from 'shared/ui';
-import { SkeletonTheme } from 'shared/ui/SkeletonLoader/SkeletonLoader';
+import { SkeletonLoader, SkeletonTheme } from 'shared/ui';
 
 export const GenreMenu = (): ReturnComponentType => {
     const { genres, isLoading } = usePopularGenres();

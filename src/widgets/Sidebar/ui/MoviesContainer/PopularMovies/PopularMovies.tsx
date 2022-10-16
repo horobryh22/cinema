@@ -1,7 +1,8 @@
+import { MovieList } from '../MovieList/MovieList';
+
 import { useFetchPopularMoviesQuery } from 'services/movie.service';
 import { ReturnComponentType } from 'shared/types';
 import { SkeletonLoader } from 'shared/ui';
-import { MovieList } from 'widgets/Sidebar/ui/MoviesContainer/MovieList/MovieList';
 
 export const PopularMovies = (): ReturnComponentType => {
     const { popularMovies, isLoading } = useFetchPopularMoviesQuery(undefined, {
