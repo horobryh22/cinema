@@ -9,7 +9,7 @@ const Home: NextPage = () => {
             title="Watch movies online"
             description="Watch MovieApp movies and TV shows online or stream right to your browser"
         >
-            <HomePage />;
+            <HomePage />
         </Meta>
     );
 };

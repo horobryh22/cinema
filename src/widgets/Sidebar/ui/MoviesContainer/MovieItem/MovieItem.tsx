@@ -36,7 +36,7 @@ export const MovieItem = ({ movie }: MovieItemProps): ReturnComponentType => {
                 />
             </AppLink>
             <div className={classes.info}>
-                <div className={classes.title}>{title}</div>
+                <div className={classes.heading}>{title}</div>
                 <div className={classes.genres}>{mappedGenres}</div>
                 <div className={classes.rating}>
                     <MaterialIcon name="MdStarRate" />

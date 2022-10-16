@@ -1,12 +1,12 @@
+import { MovieItem } from '../MovieItem/MovieItem';
+
 import classes from './MovieList.module.scss';
 
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 import { IMovie } from 'shared/types/movie';
-import { AppLink, Heading } from 'shared/ui';
+import { AppLink } from 'shared/ui';
 import { LINK_THEME } from 'shared/ui/AppLink/AppLink';
-import { HeadingThemes } from 'shared/ui/Heading/Heading';
-import { MovieItem } from 'widgets/Sidebar/ui/MoviesContainer/MovieItem/MovieItem';
 
 interface IMoviesListProps {
     title: string;
@@ -25,7 +25,7 @@ export const MovieList = ({
 
     return (
         <div className={classNames(classes.MovieList)}>
-            <Heading title={title} theme={HeadingThemes.MOVIE_LIST} />
+            <div className={classes.heading}>{title}</div>
             {mappedMovies}
             <AppLink href={link} theme={LINK_THEME.BUTTON}>
                 See more

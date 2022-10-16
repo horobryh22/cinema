@@ -3,25 +3,11 @@ import { ReturnComponentType } from '../../types';
 
 import classes from './Heading.module.scss';
 
-export enum HeadingThemes {
-    SUBTITLE = 'subtitle',
-    MOVIE_LIST = 'movieList',
-}
-
 interface HeadingProps {
     title: string;
     className?: string;
-    theme?: HeadingThemes;
 }
 
-export const Heading = ({
-    className,
-    title,
-    theme,
-}: HeadingProps): ReturnComponentType => {
-    return (
-        <h1 className={classNames(classes.Heading, {}, [className!, classes[theme!]])}>
-            {title}
-        </h1>
-    );
+export const Heading = ({ className = '', title }: HeadingProps): ReturnComponentType => {
+    return <h1 className={classNames(classes.Heading, {}, [className])}>{title}</h1>;
 };

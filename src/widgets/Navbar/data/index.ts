@@ -6,7 +6,7 @@ export const MENU: IMenu[] = [
         items: [
             { title: 'Home', icon: 'MdHome', link: '/' },
             { title: 'Discovery', icon: 'MdExplore', link: '/genres' },
-            { title: 'Fresh movies', icon: 'MdExplore', link: '/fresh' },
+            { title: 'Fresh movies', icon: 'MdRefresh', link: '/fresh' },
             { title: 'Trending now', icon: 'MdLocalFireDepartment', link: '/trending' },
         ],
     },
