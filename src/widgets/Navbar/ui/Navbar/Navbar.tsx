@@ -8,6 +8,7 @@ import logoImage from 'shared/assets/img/logo.svg';
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 import { AppLink } from 'shared/ui';
+import { LangSwitcher } from 'widgets/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 interface INavbarProps {
@@ -28,7 +29,7 @@ export const Navbar = ({ className = '' }: INavbarProps): ReturnComponentType =>
             </AppLink>
             <MenuContainer />
             <div className={classes.switchers}>
-                <ThemeSwitcher />
+                <LangSwitcher />
                 <ThemeSwitcher />
             </div>
         </div>
