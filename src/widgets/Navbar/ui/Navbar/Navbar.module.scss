@@ -1,3 +1,7 @@
 .Navbar {
-  @apply py-layout;
+  @apply py-layout relative;
+}
+
+.switchers {
+  @apply absolute bottom-5 left-10 flex justify-evenly items-center w-48;
 }

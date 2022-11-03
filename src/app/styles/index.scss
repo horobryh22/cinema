@@ -1,15 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 @import './reset';
 @import './variables/global';
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 @import 'react-redux-toastr/src/styles/index';
 
-html,
 body {
   @apply bg-gray-900;
-
   padding: 0;
   margin: 0;
   font-family: "Outfit", serif;
@@ -31,4 +29,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+// dark theme
+body.dark {
+  @apply bg-white;
 }

@@ -5,6 +5,7 @@ const primary = '#E30B13';
 
 module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+    darkMode: 'class',
     theme: {
         colors: {
             primary,
