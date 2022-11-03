@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import Head from 'next/head';
 import NextNProgress from 'nextjs-progressbar';
 
-import { ACCENT_COLOR } from 'shared/config/constants';
+import { ACCENT_COLOR } from 'shared/const/main';
 import { ReturnComponentType } from 'shared/types';
 
 interface IHeadProvider {

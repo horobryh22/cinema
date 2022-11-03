@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 import { siteName, titleMerge } from '../config/seo';
 
-import { API_URL } from 'api/config';
+import { API_URL } from 'shared/api/config';
 import logoImage from 'shared/assets/img/logo.svg';
 import { clearText } from 'shared/lib';
 

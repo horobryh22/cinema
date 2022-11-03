@@ -1,8 +1,7 @@
-import { usePopularGenres } from '../../lib/usePopularGenres/usePopularGenres';
-import { Menu } from '../Menu/Menu';
-
 import classes from './GenreMenu.module.scss';
 
+import { usePopularGenres } from 'entities/Genre';
+import { Menu } from 'entities/Menu';
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 import { SkeletonLoader, SkeletonTheme } from 'shared/ui';
