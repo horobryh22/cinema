@@ -1,1 +1,1 @@
-export { MainProvider } from './MainProvider/MainProvider';
+export { MainProvider } from './MainProvider/ui/MainProvider';

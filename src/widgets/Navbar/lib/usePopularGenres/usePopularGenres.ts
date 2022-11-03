@@ -1,4 +1,4 @@
-import { IMenuItem } from '../../types';
+import { IMenuItem } from '../../model/types';
 
 import { getGenreUrl } from 'api/url';
 import { useFetchGenresQuery } from 'services/genre.service';

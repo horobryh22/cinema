@@ -1,19 +1,19 @@
 import { InputHTMLAttributes } from 'react';
 
+import { classNames } from '../../lib/classNames/classNames';
+import { ReturnComponentType } from '../../types';
+import { MaterialIcon } from '../MaterialIcon/MaterialIcon';
+
 import classes from './SearchField.module.scss';
 
-import { classNames } from 'shared/lib';
-import { ReturnComponentType } from 'shared/types';
-import { MaterialIcon } from 'shared/ui/MaterialIcon/MaterialIcon';
-
-interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface ISearchField extends InputHTMLAttributes<HTMLInputElement> {
     className?: string;
 }
 
 export const SearchField = ({
     className = '',
     ...restProps
-}: IInputProps): ReturnComponentType => {
+}: ISearchField): ReturnComponentType => {
     return (
         <div className={classNames(classes.Input, {}, [className])}>
             <MaterialIcon name="MdSearch" />

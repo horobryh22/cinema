@@ -1,6 +1,6 @@
 import * as MaterialIcons from 'react-icons/md';
 
-import { MaterialIconName, ReturnComponentType } from 'shared/types';
+import { MaterialIconName, ReturnComponentType } from '../../types';
 
 interface MaterialIconProps {
     name: MaterialIconName;

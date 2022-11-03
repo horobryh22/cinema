@@ -1,8 +1,7 @@
 import '../src/app/styles/index.scss';
 import { AppProps } from 'next/app';
 
-import { MainProvider } from '../src/app/providers';
-
+import { MainProvider } from 'app/providers';
 import { ReturnComponentType } from 'shared/types';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReturnComponentType => {

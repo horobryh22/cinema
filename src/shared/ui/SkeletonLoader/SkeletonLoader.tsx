@@ -1,10 +1,10 @@
 import Skeleton, { SkeletonProps } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-import classes from './SkeletonLoader.module.scss';
+import { classNames } from '../../lib/classNames/classNames';
+import { ReturnComponentType } from '../../types';
 
-import { classNames } from 'shared/lib';
-import { ReturnComponentType } from 'shared/types';
+import classes from './SkeletonLoader.module.scss';
 
 export enum SkeletonTheme {
     DEFAULT = 'default',

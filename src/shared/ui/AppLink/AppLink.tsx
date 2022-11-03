@@ -3,10 +3,10 @@ import { ReactNode } from 'react';
 import type { LinkProps } from 'next/link';
 import Link from 'next/link';
 
-import classes from './AppLink.module.scss';
+import { classNames } from '../../lib/classNames/classNames';
+import { ReturnComponentType } from '../../types';
 
-import { classNames } from 'shared/lib';
-import { ReturnComponentType } from 'shared/types';
+import classes from './AppLink.module.scss';
 
 export enum LINK_THEME {
     DEFAULT = 'default',

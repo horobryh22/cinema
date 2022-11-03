@@ -1,4 +1,4 @@
-import { Meta } from 'app/seo/Meta';
+import { Meta } from 'app/seo/ui/Meta';
 import { ReturnComponentType } from 'shared/types';
 import { Heading } from 'shared/ui';
 

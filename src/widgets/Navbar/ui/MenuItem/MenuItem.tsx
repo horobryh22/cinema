@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { IMenuItem } from '../../types';
+import { IMenuItem } from '../../model/types';
 
 import classes from './MenuItem.module.scss';
 

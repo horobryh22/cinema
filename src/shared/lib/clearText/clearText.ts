@@ -1,4 +1,4 @@
-import { Nullable } from 'shared/types';
+import { Nullable } from '../../types';
 
 export const clearText = (string: string, limit: Nullable<number>): string => {
     let result = string

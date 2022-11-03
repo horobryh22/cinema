@@ -3,7 +3,7 @@ import { ReactElement, ReactNode } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { siteName, titleMerge } from './config/seo.config';
+import { siteName, titleMerge } from '../config/seo';
 
 import { API_URL } from 'api/config';
 import logoImage from 'shared/assets/img/logo.svg';

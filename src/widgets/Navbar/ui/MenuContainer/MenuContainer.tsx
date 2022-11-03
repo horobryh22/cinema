@@ -1,4 +1,4 @@
-import { MENU } from '../../data';
+import { MENU } from '../../model/data';
 import { GenreMenu } from '../GenreMenu/GenreMenu';
 import { Menu } from '../Menu/Menu';
 

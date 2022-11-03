@@ -1,4 +1,4 @@
-import { IMenu } from '../../types';
+import { IMenu } from '../../model/types';
 import { MenuItem } from '../MenuItem/MenuItem';
 
 import classes from './Menu.module.scss';
