@@ -1,3 +1,5 @@
+import { useTranslation } from 'next-i18next';
+
 import classes from 'pages/MainPage/ui/MainPage.module.scss';
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
@@ -8,9 +10,11 @@ interface HomePageProps {
 }
 
 export const MainPage = ({ className }: HomePageProps): ReturnComponentType => {
+    const { t } = useTranslation('common');
+
     return (
         <div className={classNames(classes.HomePage, {}, [String(className)])}>
-            <Heading title="Watch movies online" />
+            <Heading title={t('Watch movies online')} />
         </div>
     );
 };

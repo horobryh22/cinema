@@ -4,13 +4,14 @@
 @import './reset';
 @import './variables/global';
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 @import 'react-redux-toastr/src/styles/index';
 
 body {
   @apply bg-gray-900;
   padding: 0;
   margin: 0;
-  font-family: "Outfit", serif;
+  font-family: "Outfit", "Raleway", serif;
 }
 
 input[type='file'],
@@ -30,8 +31,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-// dark theme
-//body.dark {
-//  @apply bg-white;
-//}

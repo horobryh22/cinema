@@ -1,3 +1,5 @@
+import { useTranslation } from 'next-i18next';
+
 import classes from './GenreMenu.module.scss';
 
 import { usePopularGenres } from 'entities/Genre';
@@ -7,6 +9,7 @@ import { ReturnComponentType } from 'shared/types';
 import { SkeletonLoader, SkeletonTheme } from 'shared/ui';
 
 export const GenreMenu = (): ReturnComponentType => {
+    const { t } = useTranslation('common');
     const { genres, isLoading } = usePopularGenres();
 
     return (
@@ -16,7 +19,7 @@ export const GenreMenu = (): ReturnComponentType => {
                     <SkeletonLoader count={4} theme={SkeletonTheme.DEFAULT} />
                 </div>
             ) : (
-                <Menu menu={{ title: 'Popular genres', items: genres }} />
+                <Menu menu={{ title: t('Popular genres'), items: genres }} />
             )}
         </>
     );

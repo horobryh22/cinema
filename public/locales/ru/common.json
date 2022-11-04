@@ -1,4 +1,15 @@
 {
+  "Popular movies": "Популярные фильмы",
+  "Favourite movies": "Любимые фильмы",
+  "Search movie":  "Найти фильм",
+  "Popular genres": "Популярные жанры",
+  "Home": "Главная",
+  "Discovery": "Все жанры",
+  "Fresh movies": "Новинки",
+  "Trending now": "В тренде",
+  "Menu": "Меню",
+  "meta_title":  "Смотри фильмы онлайн",
+  "meta_description": "Смотри сериалы и ТВ шоу онлайн прямо из своего браузера",
   "Watch movies online": "Смотри фильмы онлайн",
-  "Toggle lang": "Переключить язык"
+  "Online cinema": "Онлайн кинотеатр"
 }

@@ -1,3 +1,2 @@
-export const siteName = 'Online cinema';
-
-export const titleMerge = (title: string): string => `${title} | ${siteName}`;
+export const titleMerge = (title: string, siteName: string): string =>
+    `${title} | ${siteName}`;

@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
 import { IMenuItem } from '../../model/types';
@@ -18,6 +19,7 @@ export const MenuItem = (props: IMenuItemProps): ReturnComponentType => {
         item: { link, icon, title },
         className,
     } = props;
+    const { t } = useTranslation('common');
 
     const { asPath } = useRouter();
 
@@ -31,7 +33,7 @@ export const MenuItem = (props: IMenuItemProps): ReturnComponentType => {
         >
             <AppLink href={link} className="nav-link">
                 <MaterialIcon name={icon} />
-                <span>{title}</span>
+                <span>{t(title)}</span>
             </AppLink>
         </li>
     );

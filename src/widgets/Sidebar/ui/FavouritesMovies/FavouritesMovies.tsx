@@ -1,7 +1,10 @@
+import { useTranslation } from 'next-i18next';
+
 import { MovieList } from 'entities/Movie/ui/MovieList/MovieList';
 import { ReturnComponentType } from 'shared/types';
 
 export const FavouritesMovies = (): ReturnComponentType => {
+    const { t } = useTranslation('common');
     // const { favouritesMovies, isLoading } = useFavouritesMovies();
 
     // if (isLoading) {
@@ -20,5 +23,5 @@ export const FavouritesMovies = (): ReturnComponentType => {
     //     );
     // }
 
-    return <MovieList title="Favourites movies" link="/trending" movies={[]} />;
+    return <MovieList title={t('Favourite movies')} link="/trending" movies={[]} />;
 };

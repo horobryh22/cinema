@@ -28,7 +28,7 @@ module.exports = {
         extend: {
             spacing: {
                 0.5: '0.12rem',
-                layout: '2.75rem',
+                layout: '2.10rem',
             },
             fontSize: {
                 '2lg': '1.38rem',
