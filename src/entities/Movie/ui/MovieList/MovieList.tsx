@@ -5,7 +5,7 @@ import classes from './MovieList.module.scss';
 
 import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
-import { AppLink, LINK_THEME } from 'shared/ui';
+import { AppLink, Button, ButtonTheme, ButtonWidth } from 'shared/ui';
 
 interface IMoviesListProps {
     title: string;
@@ -26,9 +26,9 @@ export const MovieList = ({
         <div className={classNames(classes.MovieList)}>
             <div className={classes.heading}>{title}</div>
             {mappedMovies}
-            <AppLink href={link} theme={LINK_THEME.BUTTON}>
-                See more
-            </AppLink>
+            <Button theme={ButtonTheme.PRIMARY} width={ButtonWidth.FULL}>
+                <AppLink href={link}>See more</AppLink>
+            </Button>
         </div>
     );
 };

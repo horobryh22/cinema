@@ -1,17 +1,4 @@
-.ThemeSwitcher {
-    @apply bg-gray-300 hover:bg-gray-300 transition-all rounded-2xl flex items-center justify-center h-7 w-7;
-}
-
 .svg {
-    @apply h-4 w-4 text-gray-800;
-}
-
-
-// dark theme
-:global(.dark) .ThemeSwitcher {
-    @apply bg-gray-800 hover:bg-gray-700;
-}
-
-:global(.dark) .svg {
-    @apply text-gray-300;
+  @apply h-4 w-4 text-gray-800;
+  @apply dark:text-gray-300;
 }

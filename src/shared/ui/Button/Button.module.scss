@@ -1,0 +1,12 @@
+.circle {
+  @apply bg-gray-300 hover:bg-gray-500  transition-all border border-gray-500 rounded-2xl flex items-center justify-center h-7 w-7;
+  @apply dark:bg-gray-800 dark:hover:bg-gray-700;
+}
+
+.primary {
+  @apply p-2.5 btn-primary block text-center ;
+}
+
+.full-w {
+  @apply w-full;
+}

@@ -8,6 +8,7 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import ThemeDark from 'shared/assets/theme/dark.svg';
 import ThemeLight from 'shared/assets/theme/light.svg';
 import { classNames } from 'shared/lib';
+import { Button, ButtonTheme } from 'shared/ui';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -22,9 +23,9 @@ export const ThemeSwitcher = memo((props: ThemeSwitcherProps): ReactElement => {
     };
 
     return (
-        <button
-            type="button"
-            className={classNames(classes.ThemeSwitcher, {}, [className])}
+        <Button
+            theme={ButtonTheme.CIRCLE}
+            className={classNames('', {}, [className])}
             onClick={handleClick}
         >
             {theme === Theme.DARK ? (
@@ -46,6 +47,6 @@ export const ThemeSwitcher = memo((props: ThemeSwitcherProps): ReactElement => {
                     draggable={false}
                 />
             )}
-        </button>
+        </Button>
     );
 });

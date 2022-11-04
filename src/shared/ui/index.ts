@@ -3,3 +3,4 @@ export { MaterialIcon } from './MaterialIcon/MaterialIcon';
 export { Heading } from './Heading/Heading';
 export { SkeletonLoader, SkeletonTheme } from './SkeletonLoader/SkeletonLoader';
 export { SearchField } from './SearchField/SearchField';
+export { Button, ButtonSize, ButtonTheme, ButtonWidth } from './Button/Button';

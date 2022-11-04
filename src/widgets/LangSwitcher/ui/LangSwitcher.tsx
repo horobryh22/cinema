@@ -1,52 +1,64 @@
-import { memo, ReactElement, useState } from 'react';
+import { memo, ReactElement, useCallback } from 'react';
 
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+
+import classes from './LangSwitcher.module.scss';
 
 import RuIcon from 'shared/assets/lang/russia.svg';
 import UsaIcon from 'shared/assets/lang/usa.svg';
 import { classNames } from 'shared/lib';
-import classes from 'widgets/ThemeSwitcher/ui/ThemeSwitcher.module.scss';
+import { Button, ButtonTheme } from 'shared/ui';
 
 interface LangSwitcherProps {
     className?: string;
-    short?: boolean;
 }
 
-export const LangSwitcher = memo(
-    ({ className = '' }: LangSwitcherProps): ReactElement => {
-        // const { t, i18n } = useTranslation();
-        const [state, setState] = useState(false);
+export const LangSwitcher = memo((props: LangSwitcherProps): ReactElement => {
+    const { className = '' } = props;
+    const router = useRouter();
 
-        // const toggleLang = async (): Promise<void> => {
-        //     await i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
-        // };
+    const onToggleLanguageClick = useCallback(
+        (newLocale: string): void => {
+            const { pathname, asPath, query } = router;
 
-        return (
-            <button
-                type="button"
-                className={classNames(classes.ThemeSwitcher, {}, [className])}
-                onClick={() => setState(!state)}
-            >
-                {state ? (
-                    <Image
-                        src={RuIcon}
-                        width={18}
-                        height={14}
-                        className={classes.svg}
-                        alt="theme"
-                        draggable={false}
-                    />
-                ) : (
-                    <Image
-                        src={UsaIcon}
-                        width={18}
-                        height={14}
-                        className={classes.svg}
-                        alt="theme"
-                        draggable={false}
-                    />
-                )}
-            </button>
-        );
-    },
-);
+            router.push({ pathname, query }, asPath, { locale: newLocale });
+        },
+        [router],
+    );
+
+    const locale = router.locale === 'en' ? 'ru' : 'en';
+
+    const handleClick = useCallback(
+        () => onToggleLanguageClick(locale),
+        [locale, onToggleLanguageClick],
+    );
+
+    return (
+        <Button
+            theme={ButtonTheme.CIRCLE}
+            className={classNames('', {}, [className])}
+            onClick={handleClick}
+        >
+            {router.locale === 'en' ? (
+                <Image
+                    src={RuIcon}
+                    width={18}
+                    height={14}
+                    className={classes.svg}
+                    alt="theme"
+                    draggable={false}
+                />
+            ) : (
+                <Image
+                    src={UsaIcon}
+                    width={18}
+                    height={14}
+                    className={classes.svg}
+                    alt="theme"
+                    draggable={false}
+                />
+            )}
+        </Button>
+    );
+});
