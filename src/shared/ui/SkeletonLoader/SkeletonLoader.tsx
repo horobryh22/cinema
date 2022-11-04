@@ -6,6 +6,8 @@ import { ReturnComponentType } from '../../types';
 
 import classes from './SkeletonLoader.module.scss';
 
+import { useTheme } from 'app/providers/ThemeProvider';
+
 export enum SkeletonTheme {
     DEFAULT = 'default',
 }
@@ -20,11 +22,13 @@ export const SkeletonLoader = ({
     className = '',
     ...restProps
 }: ISkeletonProps): ReturnComponentType => {
+    const { theme: appTheme } = useTheme();
+
     return (
         <Skeleton
             {...restProps}
-            baseColor="#1F2125"
-            highlightColor="#292A2E"
+            baseColor={appTheme === 'dark' ? '#1F2125' : '#9bcfe8'}
+            highlightColor={appTheme === 'dark' ? '#292A2E' : '#ffffff'}
             className={classNames(classes.Skeleton, {}, [className, classes[theme]])}
         ></Skeleton>
     );

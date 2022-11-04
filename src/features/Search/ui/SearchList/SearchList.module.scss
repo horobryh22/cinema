@@ -1,8 +1,10 @@
 .MoviesList {
-  @apply absolute border-gray-700 rounded-layout bg-gray-800 w-full animate-fade z-10;
+  @apply absolute border-gray-700 rounded-layout bg-blue-600 w-full animate-fade z-10;
+  @apply dark:border-gray-700 dark:bg-gray-800;
   top: calc(100% + 15px);
 }
 
 .noMovies {
   @apply text-white text-center my-4;
+  @apply dark:text-white;
 }

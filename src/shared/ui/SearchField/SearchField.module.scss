@@ -1,19 +1,24 @@
 .Input {
-  @apply rounded-3xl border border-gray-700 px-3 py-2 flex items-center transition-colors;
+  @apply rounded-3xl border border-blue-600 px-3 py-2 flex items-center transition-colors;
+  @apply dark:border-gray-700;
 
   > svg {
-    @apply fill-gray-600 mr-2 text-3xl transition-colors;
+    @apply fill-blue-900 mr-2 text-3xl transition-colors;
+    @apply dark:fill-gray-600;
   }
 
   > input {
-    @apply text-white placeholder:text-gray-600 block w-full bg-transparent outline-none;
+    @apply text-black placeholder:text-gray-600 block w-full bg-transparent outline-none;
+    @apply dark:text-white dark:placeholder:text-gray-600;
   }
 
   &:focus-within {
-    @apply border-gray-600;
+    @apply border-blue-600;
+    @apply dark:border-gray-600;
 
     > svg {
-      @apply fill-gray-500;
+      @apply fill-blue-600;
+      @apply dark:fill-gray-500;
     }
   }
 }

@@ -2,6 +2,7 @@
   @apply mt-11 animate-fade;
 
   .heading {
-    @apply font-bold text-xl mb-5 capitalize text-white text-opacity-100;
+    @apply font-semibold text-xl mb-5 capitalize text-gray-900 text-opacity-100;
+    @apply dark:text-white;
   }
 }

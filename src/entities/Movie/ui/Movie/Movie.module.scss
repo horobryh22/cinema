@@ -20,11 +20,13 @@
   width: 67%;
 
   .heading {
-    @apply text-white text-lg font-medium truncate;
+    @apply text-gray-800 text-lg font-medium truncate;
+    @apply dark:text-white;
   }
 
   .genres {
-    @apply text-gray-600 text-sm;
+    @apply text-gray-800 text-sm;
+    @apply dark:text-gray-600;
   }
 }
 
@@ -36,6 +38,7 @@
   }
 
   > span {
-    @apply text-white font-medium pt-0.5;
+    @apply text-gray-800 font-medium pt-0.5;
+    @apply dark:text-white;
   }
 }

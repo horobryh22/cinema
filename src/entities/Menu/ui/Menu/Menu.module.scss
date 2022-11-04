@@ -2,6 +2,7 @@
   @apply mb-14 animate-fade;
 
   .heading {
-    @apply text-gray-500 uppercase text-sm font-semibold pl-layout mb-4;
+    @apply text-blue-900 uppercase text-sm font-semibold pl-layout mb-4;
+    @apply dark:text-gray-500;
   }
 }

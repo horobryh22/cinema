@@ -7,10 +7,12 @@
 }
 
 .nav-link {
-  @apply flex items-center text-gray-600 px-3 mb-4 cursor-pointer;
+  @apply flex items-center text-gray-800 px-3 mb-4 cursor-pointer;
+  @apply dark:text-gray-600;
 
   > span {
-    @apply ml-3 text-lg hover:text-white;
+    @apply ml-3 text-lg hover:text-secondary;
+    @apply dark:hover:text-white;
   }
 
   > svg {
@@ -34,7 +36,8 @@
   }
 
   &:hover::after {
-    @apply bg-primary h-2/5;
+    @apply bg-black h-2/5;
+    @apply dark:bg-primary;
   }
 
   img {
@@ -43,15 +46,10 @@
 
   > span {
     @apply ml-3 text-white truncate;
+    @apply dark:text-white;
 
     &:last-child {
       width: 70%;
     }
   }
 }
-
-
-// themes
-//.button {
-//  @apply p-2.5 btn-primary block text-center;
-//}

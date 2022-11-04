@@ -2,6 +2,7 @@ const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 
 const primary = '#E30B13';
+const secondary = '#39AFEA';
 
 module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
@@ -9,11 +10,17 @@ module.exports = {
     theme: {
         colors: {
             primary,
+            secondary,
             black: colors.black,
             white: colors.white,
             transparent: colors.transparent,
             yellow: {
                 700: '#F5C521',
+            },
+            blue: {
+                300: '#F4F4FB',
+                600: '#39AFEA',
+                900: secondary,
             },
             gray: {
                 300: '#d9dae8',
@@ -83,6 +90,16 @@ module.exports = {
                     transition: 'background-color .3s easy-in-out',
                     '&:hover': {
                         backgroundColor: '#ff0009',
+                    },
+                },
+
+                '.btn-secondary': {
+                    backgroundColor: '#39AFEA',
+                    color: '#F4F4FB',
+                    borderRadius: '0.65rem',
+                    transition: 'background-color .3s easy-in-out',
+                    '&:hover': {
+                        backgroundColor: '#2b9ed7',
                     },
                 },
 

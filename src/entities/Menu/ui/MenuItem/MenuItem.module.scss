@@ -2,14 +2,17 @@
   @apply px-8 border-r-4 border-r-transparent transition-colors;
 
   &.active {
-    @apply border-r-primary;
+    @apply border-r-secondary;
+    @apply dark:border-r-primary;
 
     >a > span {
-      @apply text-white;
+      @apply text-blue-900;
+      @apply dark:text-white;
     }
 
     >a > svg {
-      @apply fill-primary;
+      @apply fill-secondary;
+      @apply dark:fill-primary;
     }
   }
 }

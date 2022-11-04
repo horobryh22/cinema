@@ -1,6 +1,9 @@
 import { useTranslation } from 'next-i18next';
 
-import { MovieList } from 'entities/Movie/ui/MovieList/MovieList';
+import classes from './FavouritesMovies.module.scss';
+
+import { MovieList } from 'entities/Movie';
+import { classNames } from 'shared/lib';
 import { ReturnComponentType } from 'shared/types';
 
 export const FavouritesMovies = (): ReturnComponentType => {
@@ -15,13 +18,13 @@ export const FavouritesMovies = (): ReturnComponentType => {
     //     );
     // }
 
-    // if (!userAuth) {
-    //     return (
-    //         <div className={classNames(classes.userNoAuth)}>
-    //             For viewing favorites movies please authorize
-    //         </div>
-    //     );
-    // }
+    if (!false) {
+        return (
+            <div className={classNames(classes.userNoAuth)}>
+                For viewing favorites movies please authorize
+            </div>
+        );
+    }
 
     return <MovieList title={t('Favourite movies')} link="/trending" movies={[]} />;
 };
